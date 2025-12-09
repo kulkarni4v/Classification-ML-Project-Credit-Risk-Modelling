@@ -4,14 +4,15 @@ Logistic Regression making predictions whether the given customer could be a def
 ---
 
 This project provides a complete setup for deploying a Credit Risk Prediction machine-learning model. It includes the trained model artifacts, dataset samples, and a lightweight API Streamlit built with Python for serving predictions.
+----------------------------------------------------------------------------------------------------
+Project Strucutre
 
-📁 Project Structure
 Project2_Deployment_Resources/
 │
 ├── credit_risk_model_jupyter_notebook.ipynb     # Notebook used for model training & experimentation
 │
-├── app/                                   # Deployment-ready API application
-│   ├── main.py                             # Main FastAPI (or Flask) application
+├── app/                                   # Deployment-ready application
+│   ├── main.py                             # Main API / Streamlit app
 │   ├── prediction_helper.py                # Feature processing & model invocation utilities
 │   └── artifacts/
 │       └── model_data.joblib               # Serialized trained ML model for predictions
@@ -23,6 +24,7 @@ Project2_Deployment_Resources/
     ├── bureau_data.csv
     ├── customers.csv
     └── loans.csv
+-----------------------------------------------------------------------------------------------------
 
 🚀 Overview
 
