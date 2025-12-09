@@ -1,91 +1,78 @@
-# Classification-ML-Project-Credit-Risk-Modelling
-Logistic Regression making predictions whether the given customer could be a defaulter or not , based on customer's financial attributes and requirements
+<!-- PROJECT TITLE -->
+<h1 align="center">💳 Credit Risk Prediction – Machine Learning Model Deployment</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Deployment-Streamlit%20Cloud-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Model-Classification-orange?style=for-the-badge" />
+</p>
 
 ---
 
-This project provides a complete setup for deploying a Credit Risk Prediction machine-learning model. It includes the trained model artifacts, dataset samples, and a lightweight API Streamlit built with Python for serving predictions.
-----------------------------------------------------------------------------------------------------
-Project Strucutre
+## 🚀 **Live Demo**
 
+<p align="center">
+  <a href="https://classification-ml-project-credit-risk-modelling-tkmyawc8stj3mu.streamlit.app/">
+    <img src="https://img.shields.io/badge/🌐%20Open%20Streamlit%20App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+  </a>
+</p>
+
+👉 **Click the button above** to try the real-time **interactive Credit Risk Prediction App** deployed on **Streamlit Cloud**.
+
+---
+
+## 🔥 **Project Overview**
+
+This project provides a complete pipeline for building and deploying a **Credit Risk Prediction Model** using Machine Learning.  
+It includes:
+
+- 🧠 **Model training notebook**
+- 📦 **Streamlit app for deployment**
+- 🔍 **Prediction pipeline**
+- 📊 **Datasets for training & analysis**
+- ☁️ **Fully deployed live version**
+
+---
+
+## 🛠️ **Tech Stack & Libraries**
+
+### **Languages**
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="60" />
+</p>
+
+### **Frameworks & Tools**
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" width="55" />
+</p>
+
+### **Libraries Used**
+<p align="left">
+  <img src="https://pandas.pydata.org/static/img/pandas_secondary.svg" width="95" />
+  <img src="https://numpy.org/images/logo.svg" width="85" />
+  <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" width="90" />
+
+</p>
+
+---
+
+## 📁 **Project Structure**
+
+```text
 Project2_Deployment_Resources/
 │
-├── credit_risk_model_jupyter_notebook.ipynb     # Notebook used for model training & experimentation
+├── credit_risk_model_codebasics.ipynb     # Notebook for training the ML model
 │
 ├── app/                                   # Deployment-ready application
-│   ├── main.py                             # Main API / Streamlit app
-│   ├── prediction_helper.py                # Feature processing & model invocation utilities
+│   ├── main.py                             # Streamlit app (frontend + inference)
+│   ├── prediction_helper.py                # Preprocessing + model prediction logic
 │   └── artifacts/
-│       └── model_data.joblib               # Serialized trained ML model for predictions
+│       └── model_data.joblib               # Trained ML model
 │
 ├── artifacts/
-│   └── model_data.joblib                   # Standalone copy of the trained model
+│   └── model_data.joblib                   # Backup model artifact
 │
-└── dataset/                                # Sample dataset used in model development
+└── dataset/
     ├── bureau_data.csv
     ├── customers.csv
     └── loans.csv
------------------------------------------------------------------------------------------------------
-
-🚀 Overview
-
-This project is designed to:
-
-Train a credit-risk machine-learning model using historical customer, loan, and bureau data.
-
-Package the trained model using joblib.
-
-Expose the model through a simple API for online inference.
-
-Provide datasets and notebooks for further experimentation or retraining.
-
-The API accepts customer & loan input features and returns the predicted probability of loan default.
-
-🧠 Model Training
-
-Model training is performed in:
-
-credit_risk_model_jupyter_notebook.ipynb
-
-
-This notebook includes:
-
-Data preprocessing
-
-Feature engineering
-
-Model training (likely RandomForest / XGBoost / Logistic Regression depending on code)
-
-Model evaluation (ROC-AUC, accuracy, etc.)
-
-Exporting the model to model_data.joblib
-
-🏗️ API Application
-
-API logic is located inside:
-
-app/
-    main.py
-    prediction_helper.py
-
-main.py
-
-Handles HTTP routes for prediction.
-
-Loads the ML model from artifacts/model_data.joblib.
-
-Defines request/response schemas.
-
-Calls helper functions to preprocess inputs and run inference.
-
-prediction_helper.py
-
-Contains:
-
-Feature-processing utilities
-
-Model loading & prediction functions
-
-Any transformations required to align inputs with what the model expects
-
-
-Credits: Codebasics
